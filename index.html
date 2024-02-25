@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        background-color: #333;
+        color: #ddd;
+        font-family: system-ui;
+      }
+      h1 {
+        margin-block: 0;
+        margin-bottom: 0.5rem;
+        font-size: 1.5rem;
+      }
+      img {
+        max-width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="h1"></h1>
+    <img src="" alt="" id="img" />
+  </body>
+  <script>
+    const h1 = document.querySelector("#h1");
+    const img = document.querySelector("#img");
+    const name = location.search.slice(1);
+
+    h1.textContent = name;
+    img.src = "https://mybearworld.github.io/sfi/" + name;
+    img.alt = name;
+  </script>
+</html>
